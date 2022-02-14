@@ -2,6 +2,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const ejs = require("ejs")
+const date = require("./date.js")
 
 const app = express()
 var port = 3000
@@ -18,15 +19,7 @@ var items = ["buy food" , "cook food" , "eat food"]
 
 app.get("/", (req, res) => {
 
-    var today = new Date()
-  
-    var options = {
-        weekday: "long" ,
-        day: "numeric" ,
-        month: "long" 
-    }
-
-    var day = today.toLocaleDateString("en-US",options)
+   const day = date.day()
 
     res.render('list', { day: day , items: items});
 
@@ -34,7 +27,7 @@ app.get("/", (req, res) => {
 
 
 app.post("/",(req,res)=>{
-    var item = req.body.newItem
+    const item = req.body.newItem
     items.push(item)
     res.redirect("/")
 })
