@@ -80,7 +80,18 @@ app.post("/",(req,res)=>{
 })
 
 app.post("/delete",(req,res)=>{
-    console.log(req.body)
+
+    console.log(req.body.checkbox)
+
+    Item.remove({_id: req.body.checkbox} ,(err)=>{
+        if(!err){
+            console.log("1 document deleted")
+        }else{
+            console.log(err)
+        }
+    })
+
+    res.redirect("/")
 })
 
 
