@@ -15,7 +15,17 @@ app.use(express.static("public"))
 app.set("view engine","ejs")
 
 
-mongoose.connect('mongodb://localhost:27017/todoListDB', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://localhost:27017/todoListDB', { useNewUrlParser: true, useUnifiedTopology: true });
+
+mongoose.connect('mongodb+srv://misash:admin@cluster0.fqxyd.mongodb.net/?retryWrites=true&w=majority')
+    .then((db)=>{
+        console.log("DB connected")
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+
+
 
 const itemsSchema = {
     name: String
