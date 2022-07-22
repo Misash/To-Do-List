@@ -168,5 +168,5 @@ app.post("/delete",(req,res)=>{
 
 
 app.listen(port || process.env.PORT, () => {
-    console.log(`server started on port ${port}`)
+    console.log(`server started `)
 })
