@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const _ = require("lodash")
 
 const app = express()
-var port = 3000
+// var port = 3000
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"))
