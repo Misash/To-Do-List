@@ -14,4 +14,7 @@ Make sure you have [Node.js](http://nodejs.org/)  installed.
 
 ```
 
-Your app should now be running on [localhost:3000](http://localhost:5000/).
+Your app should now be running on [localhost:3000](http://localhost:3000/).
+
+## Demo
+[you could try the app here](https://todolist-22.herokuapp.com/)
