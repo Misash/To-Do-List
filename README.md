@@ -1,6 +1,6 @@
 # To Do List 
 
-To-Do list web app implemented with [Javascript](https://www.javascript.com/) and [EJS](https://ejs.co/)
+To-Do list web app implemented with [Javascript](https://www.javascript.com/) [EJS](https://ejs.co/) and mondoDB
 
 ## Run Locally
 
